@@ -1,0 +1,22 @@
+.loginForm {
+    margin: 350px;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-left: 900px;
+}
+
+.loginButton {
+    margin-top: 20px;
+    width: 35%;
+}
+
+.SingUpButton {
+    margin-left: 100px;
+    margin-top: 5px;
+}

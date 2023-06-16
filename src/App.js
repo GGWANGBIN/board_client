@@ -1,23 +1,20 @@
 import './App.css';
-import {useEffect, useState} from 'react';
-import axios from "axios";
 import Login from "./View/Login";
 import SignUp from "./View/SignUp";
+import Main from "./View/Main";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-function App(){
-
-    const no = 1;
-
-    useEffect(() => {
-        axios.post('/hello',{no})
-            .then(response => setFf(response.data))
-    }, [])
-
-    const [ff,setFf] = useState([]);
-
-    return(
-        <Login>
-        </Login>
+function App() {
+    return (
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Login/>}></Route>
+                    <Route path="/SignUp" element={<SignUp/>}></Route>
+                    <Route path="/Main" element={<Main/>}></Route>
+                </Routes>
+            </BrowserRouter>
+        </div>
     );
 }
 
