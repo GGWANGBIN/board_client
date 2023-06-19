@@ -1,22 +1,120 @@
 .loginForm {
-    margin: 350px;
-    width: 500px;
-    height: 300px;
+    margin-top: 150px;
+    margin-left: 700px;
+    width: 600px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid lightgrey;
+    border: 3px solid darkslateblue;
     border-radius: 5px;
-    margin-left: 900px;
+}
+
+.SignUpForm {
+    margin-top: 150px;
+    margin-left: 700px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.pwdChangeForm {
+    margin-top: 150px;
+    margin-left: 700px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 5px;
 }
 
 .loginButton {
     margin-top: 20px;
-    width: 35%;
+    width: 70%;
+    height: 50px;
+    font-size: 27px;
+    font-weight: bold;
+    background-color: indigo;
+    color: white;
 }
 
-.SingUpButton {
-    margin-left: 100px;
-    margin-top: 5px;
+.idDoubleCheckButton {
+    margin-left: 300px;
+    position: absolute;
+    margin-bottom: 100px;
 }
+
+.signUpButton {
+    width: 200px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
+    background-color: darkslateblue;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.pwdChangeButton {
+    width: 200px;
+    height: 40px;
+    margin-left: 90px;
+    margin-top: 20px;
+    background-color: darkslateblue;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.LoginMenuText {
+    text-decoration: none;
+    color: black;
+}
+
+.LoginMenuText:hover {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.loginMenu {
+    margin-left: auto;
+    width: 60%;
+    font-size: 16px;
+    margin-right: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.loginInput {
+    width: 69%;
+    height: 35px;
+}
+
+.logo {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.idCheck {
+
+    -ms-transform: scale(2); /* IE */
+
+    -moz-transform: scale(2); /* FF */
+
+    -webkit-transform: scale(1.2); /* Safari and Chrome */
+
+    -o-transform: scale(2); /* Opera */
+
+    margin-right: 5px;
+
+}
+
