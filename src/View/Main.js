@@ -1,12 +1,17 @@
 import Header from "../Component/Header";
+import {useNavigate} from "react-router-dom";
+import Contents from "../Component/Contents";
+import "../custCSS.css";
 
 function Main() {
 
+    const navigate = useNavigate();
+
     return (
-        <>
+        <div className={"mainFrame"}>
             <Header></Header>
-            <a>메인입니다</a>
-        </>
+            <Contents>ddd</Contents>
+        </div>
     )
 }
 

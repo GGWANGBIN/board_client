@@ -26,7 +26,7 @@ export default function SignUp() {
             return alert("아이디를 입력해주세요.");
         }
 
-        axios.get("/idDoubleCheck", {
+        axios.get("/IdDoubleCheck", {
             params:{id : id}
         })
              .then((r) => {
@@ -58,11 +58,11 @@ export default function SignUp() {
             return alert("비밀번호는 특수문자를 포함하면서 8자리 이상이어야 합니다.");
         }
 
-        axios.post("/signUp", {name: name, id:id, password:password})
+        axios.post("/SignUp", {name: name, id:id, password:password})
             .then((r) => {
                 if(r.status === 200) {
                     alert("가입성공");
-                    navigate("/")
+                    navigate("/");
                 }
         })
     }

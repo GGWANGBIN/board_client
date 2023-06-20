@@ -39,12 +39,13 @@
 
 .loginButton {
     margin-top: 20px;
-    width: 70%;
+    width: 82%;
     height: 50px;
     font-size: 27px;
     font-weight: bold;
     background-color: indigo;
     color: white;
+    margin-left: 50px;
 }
 
 .idDoubleCheckButton {
@@ -56,7 +57,7 @@
 .signUpButton {
     width: 200px;
     height: 40px;
-    margin-left: 40px;
+    margin-left: 100px;
     margin-top: 20px;
     background-color: darkslateblue;
     color: white;
@@ -95,8 +96,9 @@
 }
 
 .loginInput {
-    width: 69%;
+    width: 80%;
     height: 35px;
+    margin-left: 50px;
 }
 
 .logo {
@@ -105,16 +107,18 @@
 }
 
 .idCheck {
-
     -ms-transform: scale(2); /* IE */
-
     -moz-transform: scale(2); /* FF */
-
     -webkit-transform: scale(1.2); /* Safari and Chrome */
-
     -o-transform: scale(2); /* Opera */
-
     margin-right: 5px;
+}
 
+.mainFrame {
+    border: 3px solid navy;
+    height: 900px;
+    width: 1000px;
+    margin-left: 450px;
+    padding: 10px 10px;
 }
 
