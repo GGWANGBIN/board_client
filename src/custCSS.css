@@ -51,13 +51,24 @@
 .idDoubleCheckButton {
     margin-left: 300px;
     position: absolute;
-    margin-bottom: 100px;
+    margin-bottom: 123px;
+}
+
+.signUpCancleButton {
+    width: 120px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 20px;
+    background-color: darkslateblue;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
 }
 
 .signUpButton {
-    width: 200px;
+    width: 120px;
     height: 40px;
-    margin-left: 100px;
+    margin-left: 60px;
     margin-top: 20px;
     background-color: darkslateblue;
     color: white;
@@ -66,11 +77,20 @@
 }
 
 .pwdChangeButton {
-    width: 200px;
+    width: 120px;
     height: 40px;
-    margin-left: 90px;
+    margin-left: 80px;
     margin-top: 20px;
-    background-color: darkslateblue;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.pwdChangeCancleButton {
+    width: 120px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 20px;
+
     color: white;
     font-size: 18px;
     border-radius: 5px;
@@ -99,6 +119,7 @@
     width: 80%;
     height: 35px;
     margin-left: 50px;
+    margin-bottom: 5px;
 }
 
 .logo {
@@ -114,11 +135,287 @@
     margin-right: 5px;
 }
 
+.headerMenu {
+    text-decoration: none;
+    color: #282c34;
+    font-weight: bold;
+}
+
+.headerMenu:hover {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.boardNo {
+    width: 70px;
+    text-align: center;
+}
+
+.boardTitle {
+    width: 400px;
+    text-align: center;
+}
+
+.boardTitles {
+    display: block;
+    max-width: 360px;
+    text-decoration: none;
+    color: black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.parentTitles {
+    display: block;
+    max-width: 215px;
+    text-decoration: none;
+    color: black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.parentTitles:hover {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.ChildCommentContent {
+    max-width: 215px;
+    text-decoration: none;
+    color: black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.commentContent {
+    word-break: break-all;
+}
+
+.boardTitles:hover {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.boardWriter {
+    width: 70px;
+    text-align: center;
+}
+
+.boardDate {
+    width: 150px;
+    text-align: center;
+}
+
+.boardHit {
+    width: 70px;
+    text-align: center;
+}
+
+.boardSecret {
+    width: 70px;
+    text-align: center;
+}
+
+.boardFrame {
+    border: 1px black solid;
+    height: 75.3%;
+}
+
+.commentFrame {
+    height: 378px;
+   overflow:scroll;
+    maxHeight:378px;
+}
+
 .mainFrame {
-    border: 3px solid navy;
+    border: 2px solid darkslategray;
     height: 900px;
     width: 1000px;
     margin-left: 450px;
     padding: 10px 10px;
+    margin-top: 10px;
+    overflow: scroll;
+    max-height: 900px;
 }
+
+.mainFrame::-webkit-scrollbar {
+    display: none;
+}
+
+.LoginForm {
+    width: 90%;
+}
+
+.commentForm {
+    border: 2px slategray solid;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.commentMenuFrame {
+    border: solid 1px darkgrey;
+    border-left: none;
+    border-right: none;
+}
+
+.commentMenu {
+    padding: 5px 0 5px 7px;
+}
+
+.commentText {
+    padding: 5px 0 5px 0;
+}
+
+.commentButton {
+    margin-left: 10px;
+    border: none;
+    background-color: #c1c9e3;
+    border-radius: 4px;
+}
+
+.commentButton:hover {
+    color: royalblue;
+}
+
+.commentModifyButton {
+    margin-left: 10px;
+    border: none;
+    background-color: olivedrab;
+    border-radius: 4px;
+}
+
+.hideModifyComment {
+    display: none;
+}
+
+.openModifyComment {
+    display: block;
+}
+
+.newBoardBtn {
+    height: 30px;
+    margin-top: 17px;
+    margin-left: 15px;
+}
+
+.pwdTitle {
+    position: absolute;
+    padding-left: 5px;
+    margin-right: 400px;
+    margin-bottom: 600px;
+    width: 170px;
+    background-color: white;
+    color: black;
+}
+
+.signUpTitle {
+    position: absolute;
+    padding-left: 5px;
+    margin-right: 450px;
+    margin-bottom: 600px;
+    width: 110px;
+    background-color: white;
+    color: black;
+}
+
+.form-control:focus {
+    border-color: #337ab7 !important;
+    box-shadow: inset 0 1px 1px #337ab7, 0 0 5px #337ab7 !important;
+}
+
+.commentCnt {
+    color: red;
+}
+
+.boardDetailTitle {
+    word-break: break-all;
+}
+
+.boardContent {
+    word-break: break-all;
+}
+
+
+/* ================ 페이징 css 시작 ===================== */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul.pagination li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  ul.pagination li:first-child{
+    border-radius: 5px 0 0 5px;
+  }
+
+  ul.pagination li:last-child{
+    border-radius: 0 5px 5px 0;
+  }
+
+  ul.pagination li a {
+    text-decoration: none;
+    color: #337ab7;
+    font-size: 1rem;
+  }
+
+  ul.pagination li.active a {
+    color: white;
+  }
+
+  ul.pagination li.active {
+    background-color: cornflowerblue;
+  }
+
+  ul.pagination li a:hover,
+  ul.pagination li a.active {
+    color: blue;
+  }
+
+  .page-selection {
+    width: 48px;
+    height: 30px;
+    color: #337ab7;
+  }
+
+/* ================ 페이징 css 끝 ===================== */
+
+.SecretButtonY {
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: royalblue;
+    font-size: 14px;
+    width: 52px;
+}
+
+.SecretButtonN {
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: crimson;
+    font-size: 14px;
+}
+
+
+
+
 

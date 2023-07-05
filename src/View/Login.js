@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import "../custCSS.css"
+import "../custCSS.css";
 import {Link, useNavigate} from "react-router-dom";
-import PwdChange from "./PwdChange";
 import {useForm} from "react-hook-form";
 import {useCookies} from "react-cookie";
+import logoImg from "../img/logo.jpg"
+
 
 function Login() {
 
@@ -48,13 +49,13 @@ function Login() {
 
     return (
         <div className={"loginForm"}>
-            <img src={require("../img/logo.jpg")} className={"logo"}/>
-            <form onSubmit={handleSubmit(loginPro)} style={{width:"90%"}}>
-            <input value={id} className={"loginInput"} onChange={(e) => {setId(e.target.value);}} placeholder="ID" style={{marginBottom: "5px"}} required></input>
+            <img src={logoImg} className={"logo"}/>
+            <form onSubmit={handleSubmit(loginPro)} className={"LoginForm"}>
+            <input value={id} className={"loginInput"} onChange={(e) => {setId(e.target.value);}} placeholder="ID" required></input>
             <input type={"password"} value={password} className={"loginInput"} onChange={(e) => {setPassword(e.target.value);}} placeholder={"Password"} required></input>
             <div className={"loginMenu"}>
                 <input type={"checkbox"} id={"idCheck"} className={"idCheck"} onChange={handleOnChange} checked={isRemember}/>
-                <label for={"idCheck"} className={"LoginMenuText"}>아이디 저장</label>
+                <label htmlFor={"idCheck"} className={"LoginMenuText"}>아이디 저장</label>
                 <strong>│</strong>
                 <Link to="/PwdChange" className={"LoginMenuText"}>비밀번호 변경</Link>
                 <strong>│</strong>
@@ -64,8 +65,6 @@ function Login() {
             </form>
 
         </div>
-
-
     )
 }
 

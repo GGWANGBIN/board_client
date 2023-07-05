@@ -69,14 +69,15 @@ export default function SignUp() {
 
     return (
         <fieldset className={"SignUpForm"}>
-            <legend style={{fontSize: "25px", fontWeight: "bold"}}>회원가입</legend>
-            <button onClick={idDoubleCheck} className={"idDoubleCheckButton"}>중복확인</button>
+            <legend style={{fontSize: "25px", fontWeight: "bold"}} className={"signUpTitle"}>회원가입</legend>
+            <button onClick={idDoubleCheck} className={"idDoubleCheckButton btn btn-dark btn-sm"}>중복확인</button>
             <form onSubmit={handleSubmit(signUp)}>
-                <p><label>이름 </label><input onChange={(e) => {setName(e.target.value)}} style={{marginLeft: "70px"}} required/></p>
-                <p><label>아이디 </label><input onChange={(e) => {setId(e.target.value)}} style={{marginLeft: "55px"}} required/></p>
-                <p style={{marginRight: "70px"}}><label>비밀번호 </label><input type={"password"} onChange={(e) => {setPassword(e.target.value)}} style={{marginLeft: "40px"}} required/></p>
+                <p><label>이름 </label><input onChange={(e) => {setName(e.target.value)}} style={{marginLeft: "73px"}} required/></p>
+                <p><label>아이디 </label><input onChange={(e) => {setId(e.target.value)}} style={{marginLeft: "58px"}} required/></p>
+                <p style={{marginRight: "70px"}}><label>비밀번호 </label><input type={"password"} onChange={(e) => {setPassword(e.target.value)}} style={{marginLeft: "42px"}} required/></p>
                 <p style={{marginRight: "70px"}}><label>비밀번호 확인 </label><input type={"password"} onChange={(e) => {setPasswordCheck(e.target.value)}} style={{marginLeft: "5px"}} required/></p>
-                <button className={"signUpButton"} type={"submit"}>가입하기</button>
+                <button className={"signUpButton btn btn-primary"} type={"submit"}>가입하기</button>
+                <button className={"signUpCancleButton btn btn-secondary"} type={"submit"} onClick={(e) => {navigate(-1)}}>취소하기</button>
             </form>
         </fieldset>
     );
