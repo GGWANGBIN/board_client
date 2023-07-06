@@ -37,6 +37,8 @@ function BoardDetail() {
         })
   }, [dd])
 
+  console.log(commentList)
+
   const goMain = () => {
     navigate(-1);
   }
@@ -136,8 +138,8 @@ function BoardDetail() {
         <button type={"button"} className={"btn btn-sm btn-dark me-2"} onClick={goMain}>뒤로가기</button>
           { boardDetail.writer == loginUser ?
               <>
-              <button type={"button"} className={"btn btn-sm btn-dark me-2"} onClick={(e) => {goBoardModify(boardDetail)}}>수정</button>
-              <button type={"button"} className={"btn btn-sm btn-dark"} onClick={(e) => {deleteBoard(boardDetail.id)}}>삭제</button>
+              <button type={"button"} className={"btn btn-sm btn-primary me-2"} onClick={(e) => {goBoardModify(boardDetail)}}>수정</button>
+              <button type={"button"} className={"btn btn-sm btn-secondary"} onClick={(e) => {deleteBoard(boardDetail.id)}}>삭제</button>
               </>
               : null
           }
@@ -179,7 +181,10 @@ function BoardDetail() {
           {commentList && commentList.map((commentList)=>(
           <tr>
             <td className={"commentText"}>{commentList.writer}</td>
-            <td className={"commentContent"}>{commentList.content}</td>
+            {commentList.secret == '공개' ?
+            <td className={"commentContent"}>{commentList.content}</td> :
+            <td style={{color:"red"}}>게시글 작성자에 의해 블라인드 처리 되었습니다.</td>
+            }
             <td>{commentList.createDate.substr(0,16)}</td>
             <td style={{border:"1px white solid"}}>
               {commentList.writer === loginUser ?
