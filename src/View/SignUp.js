@@ -16,10 +16,6 @@ export default function SignUp() {
     const navigate = useNavigate();
     const { handleSubmit } = useForm();
 
-    useEffect( () => {
-        console.log(name,id,password,passwordCheck);
-    })
-
     const idDoubleCheck = () => {
 
         if(id.length === 0) {

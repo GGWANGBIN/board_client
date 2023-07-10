@@ -5,8 +5,6 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Paging from "../Component/Paging";
-import SearchBar from "../Component/SearchBar";
-
 
 function Main() {
 
@@ -45,7 +43,7 @@ function Main() {
     const goSearch = (e) => {
       e.preventDefault();
 
-      axios.get("/MyBoardList",{params:{searchMenu:searchMenu,searchText:searchText}})
+      axios.get("/BoardList",{params:{searchMenu:searchMenu,searchText:searchText}})
           .then((r) => {
             if (r.status === 200) {
               setBoardList(r.data);

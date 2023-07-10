@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useNavigate} from "react-router-dom";
 import { useLocation } from "react-router";
 
-
 function BoardDetail() {
   const location = useLocation();
   let [comment, setComment] = useState("");
@@ -19,13 +18,11 @@ function BoardDetail() {
   const [modifyCommentNo,setModifyCommentNo] = useState("");
 
   const id = location.state.value;
-
   const loginUser = sessionStorage.getItem("userid");
 
   useEffect(() => {
     axios.get("/BoardDetail", {params: {id: id}})
         .then((r) => {
-          console.log(r.data)
           setBoardDetail(r.data[0]);
         })
   }, [])
@@ -36,8 +33,6 @@ function BoardDetail() {
           setCommentList(r.data);
         })
   }, [dd])
-
-  console.log(commentList)
 
   const goMain = () => {
     navigate(-1);
